@@ -19,7 +19,41 @@ We will showcase an example of how to extract STRs from a given collection FASTA
 The extractions were orchestrated and executed on HPC cluster nodes using SLURM job scheduling.
 
 
+## Dataset
+
+The data/filtered_assemblies_.txt file, contains the complete list of ~118 thousand organism genomes of RefSeq and GenBank assemblies that were used for the analysis.
+
+For instance,
+
+```
+GCF_000002515.2 fungi   1
+GCF_000002725.2 protozoa        1
+GCF_000002765.6 protozoa        1
+GCF_000002985.6 invertebrate    1
+GCF_000005825.2 bacteria        1
+GCF_000005845.2 bacteria        1
+```
+
+Also, the extracted STR densities are provided in the data/extractions_STR/ for the original genomes, and in the data/extractions_STR_shuffled/ for the shuffled genomes.
+These tables were used to calculate the enrichment between the shuffled and real genomic sequences.
+
 ## Requirements
+
+The following python libraries are required to succesfully run the notebooks:
+
+```
+statsmodels
+numpy
+pandas
+biopython
+polars
+ushuffle
+pybedtools
+matplotlib
+seaborn
+bokeh
+snakemake
+```
 
 ## Extraction
 

@@ -1,0 +1,30 @@
+{
+  "params":
+      {
+        "IR": {
+              "minrep": 10,
+              "maxspacer": 8
+        },
+        "MR": {
+              "minrep": 10,
+              "maxspacer": 7
+        },
+        "DR": {
+              "minrep": 10,
+              "maxrep": 100,
+              "maxspacer": 10
+        }
+      },
+  "headers": [
+               "seqID",
+               "start",
+               "end",
+               "sequence_of_arm",
+               "arm_length",
+               "sequence_of_spacer",
+               "spacer_length",
+               "sequence",
+               "sequence_length"
+          ]
+}
+    

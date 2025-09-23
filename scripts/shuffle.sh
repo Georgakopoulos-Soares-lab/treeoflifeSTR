@@ -12,6 +12,11 @@ level=${3:-2}
 
 mkdir -p ${outdir}
 bucket=${SLURM_ARRAY_TASK_ID}
+if [[ -z "$bucket" ]]; then
+  echo "Error: SLURM_ARRAY_TASK_ID is not set. Please run this script as part of a SLURM array job."
+  bucket=$4
+fi
+
 echo "Processing bucket ${bucket}..."
 python shuffle.py --schedule $schedule --outdir $outdir --bucket $bucket --level $level
 echo "Bucket ${bucket} has been processed succesfully."
