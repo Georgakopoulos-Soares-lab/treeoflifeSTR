@@ -10,6 +10,7 @@ Directory structure:
 .
 ├── notebooks
 └── scripts
+└── data
 ``` 
 
 The notebooks directory contains Jupyter notebooks used for data analysis. The scripts directory contains Python scripts for data processing and extractions of STRs from genomic data.
