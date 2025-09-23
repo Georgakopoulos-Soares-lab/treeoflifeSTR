@@ -1,0 +1,13 @@
+schedule: 'schedule_tandem_extractions.json'
+indir: 'extractions_STR_MR'
+partition_col: 'sru'
+min_partition: 1
+max_partition: 10
+max_spacer: 7
+min_sequence_length: 10
+min_consensus_repeats: 3
+min_arm_length: 10
+pattern: 'STR'
+seq_col: 'sequence'
+step_threshold: 0.05
+assembly_summary: 'scripts/assembly_summary_with_tree.csv.gz'
