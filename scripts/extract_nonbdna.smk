@@ -4,11 +4,12 @@ from collections import defaultdict
 from minditool import MindiTool
 from validate_pipeline import validate_pipeline, load_schedule
 
-configfile: "config_IR.yaml"
+configfile: "config_STR.yaml"
 schedule = Path(config["schedule"]).resolve()
 if not schedule.is_file():
     raise FileNotFoundError(f"Schedule file {schedule} does not exist.")
 indir = Path(config["indir"]).resolve()
+indir.mkdir(exist_ok=True)
 if not indir.is_dir():
     raise FileNotFoundError(f"Input directory {indir} does not exist or is not a directory.")
 
@@ -32,6 +33,7 @@ ranks = ["domain",
          "family"]
 total_buckets = len(load_schedule(schedule))
 print(f"Total buckets detected: {total_buckets}")
+
 validate_pipeline(schedule, indir, pattern)
 
 rule all:

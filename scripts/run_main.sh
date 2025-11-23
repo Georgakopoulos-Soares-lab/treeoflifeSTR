@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCHEDULE=$1
-MODE=$2
-TOTAL_BUCKETS=${3:-5}
+TOTAL_BUCKETS=${1:-2}
+SCHEDULE=${2:-schedule.json}
+MODE=${3:-STR}
 
 for bucket in $(seq 0 $((TOTAL_BUCKETS - 1))); do
     echo "Starting training for bucket $bucket"
